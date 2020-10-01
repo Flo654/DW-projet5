@@ -4,7 +4,7 @@
 
 export class Products{
 
-    //
+    // commentaire
     async getProducts(url){
         try {
             let response = await fetch(url);
