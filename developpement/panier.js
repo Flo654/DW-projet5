@@ -1,4 +1,6 @@
-import { Cart , Contact, SendCart} from "./classes.js";
+import{updateCart, cart, TotalPrice, Cart , Contact, SendCart } from "./classes.js"
+
+
 
 //=======================================================
 //=======================================================
@@ -6,8 +8,14 @@ import { Cart , Contact, SendCart} from "./classes.js";
 //=======================================================
 //=======================================================
 
-if (cart === null) { alert('panier vide');
- };
+if (!cart | cart == 0){
+    document.getElementById("cart-section").innerHTML ="Votre panier est vide"
+    document.getElementById("cart-section").style.display = 'flex'
+    document.getElementById("cart-section").style.margin = '2rem'
+    document.getElementById("cart-section").style.fontSize='2rem'
+    document.getElementById("cart-section").style.justifyContent = "center";
+    document.getElementById("PersonnalInformations").style.display = 'none';
+}
 let shoppingCart = new Cart;//instanciation de la classe Cart
 shoppingCart.DisplayCart();// affichage des données à l'ecran
 updateCart();
@@ -20,18 +28,12 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
     e.preventDefault
     // creation des variables où sont stockées les valeurs du formulaire de contact
     let nom = document.getElementById('firstName').value;
-    let nomIsValid = document.getElementById('firstName').checkValidity();
     let prenom = document.getElementById('lastName').value;
-    let prenomIsValid = document.getElementById('lastName').checkValidity();
     let email = document.getElementById('Email').value;
-    let emailIsValid = document.getElementById('Email').checkValidity();
     let adresse = document.getElementById('address').value;
-    let adresseIsValid = document.getElementById('address').checkValidity();
     let codePostal = document.getElementById('zipCode').value;
-    let codePostalIsValid = document.getElementById('zipCode').checkValidity();
     let ville = document.getElementById('city').value;
-    let villeIsValid = document.getElementById('city').checkValidity();
-    let conditions = document.getElementById('invalidCheck2').checked  
+    let formIsValid =  document.getElementById('cool').checkValidity();
     
     // si le panier est vide on ne peut pas envoyer le formulaire
     if (cart == null) { alert('panier vide vous ne pouvez pas envoyer le formulaire')
@@ -39,7 +41,7 @@ document.getElementById('submitButton').addEventListener('click', function (e) {
     };
    
     //si tous les champs ne sont pas valides on ne peut pas envoyer le formulaire
-    if (prenomIsValid == false | nomIsValid ==false | emailIsValid== false | codePostalIsValid==false | villeIsValid==false | conditions == false ) {
+    if (formIsValid == false ) {
         return
      }
     

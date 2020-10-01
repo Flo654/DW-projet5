@@ -2,7 +2,7 @@
 //============= fonctions Catch & Display=================
 //=======================================================
 
- function DisplayAll(urlApi, nameProducts, uiProduct){
+ export function DisplayAll(urlApi, nameProducts, uiProduct){
   nameProducts.getProducts(urlApi) //appel de la fonction'fetch' depuis la classe Products qui renvoie la promesse
   .then (result => {
       uiProduct.DisplayProducts(result)
@@ -10,7 +10,7 @@
 };
 
 
-function DisplayOne (urlApi, nameProduct, uiProduct ){
+export function DisplayOne (urlApi, nameProduct, uiProduct ){
   nameProduct.getProducts(urlApi)
   .then (result =>{
       uiProduct.DisplaySeletedProduct(result);
@@ -26,8 +26,8 @@ function DisplayOne (urlApi, nameProduct, uiProduct ){
 //============= fonction update cart ====================
 //=======================================================
 
-var cart = JSON.parse(localStorage.getItem('cartShopping'));
-function updateCart() {
+export let cart = JSON.parse(localStorage.getItem('cartShopping'));
+export function updateCart() {
     if( cart !== null){
        let cartQuantity = cart.reduce(function (total,product){return total + product.quantity},0) ; 
        let cartTotalPrice = cart.reduce(function (total,product){return total + product.total },0) ;
@@ -38,7 +38,7 @@ function updateCart() {
        
       
     } else {
-      cartQuantity = 0
+      let cartQuantity = 0
       document.getElementById('quantite').innerHTML = cartQuantity
     }
 };
@@ -50,7 +50,7 @@ function updateCart() {
 //========== fonction display total price ===============
 //=======================================================
 
-function TotalPrice (){
+export function TotalPrice (){
     if (cart === null){return}
     let cartTotalPrice = cart.reduce(function (total,product){return total + product.total },0) ;
     let cartTotalPriceTVA = (cartTotalPrice - (cartTotalPrice/1.20)).toFixed(2)    
@@ -64,7 +64,7 @@ function TotalPrice (){
 //============ fonction add remove clear ================
 //=======================================================
 
- function ModifyQuantityProduct(product){
+ export function ModifyQuantityProduct(product){
 
   ////////////////////////////////////////////////////////////////
   ///ajout de la fonction incrementer la quantité de l'article////

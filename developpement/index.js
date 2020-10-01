@@ -4,9 +4,11 @@
 //=======================================================
 //=======================================================
 
-import { Products, UI} from "./classes.js";
 
-const teddyUi = new UI()
+import { Products, AllProductsRendering, DisplayAll, updateCart } from "./classes.js";
+
+
+const teddyUi = new AllProductsRendering
 const teddyProducts = new Products()
 const teddyApi = 'http://localhost:3000/api/teddies/'
 

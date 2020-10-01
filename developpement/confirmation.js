@@ -1,4 +1,4 @@
-
+import{cart} from "./classes.js"
 
 let OrderID = JSON.parse(sessionStorage.orderConfirm)
 
@@ -19,3 +19,4 @@ messageText.insertAdjacentHTML('afterbegin',
 
 localStorage.removeItem('cartShopping')
 sessionStorage.removeItem('orderConfirm')
+let cartQuantity = 0
