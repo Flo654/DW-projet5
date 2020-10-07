@@ -1,10 +1,12 @@
-# Orinoco Mobile First version #
-
 # :warning: #
-si vous tentez d'ouvrir le fichier index.html depuis l'endroit où vous avez cloné le repository, un message d'erreur 'CORS' qui bloque l'accés au
-script et empêche son execution. 
+si vous tentez d'ouvrir le fichier index.html depuis l'endroit où vous avez cloné le repository, 
+un message d'erreur 'CORS' qui bloque l'accés au script, vous empechera d'executer l'application correctement. 
 A ce jour, mon niveau en Js ne me permet pas de corriger ce problème.  
 Utilisez le lien suivant : https://flo654.github.io//DWJ-orinoco-projet5/frontend/index.html
+
+# Orinoco Mobile First version #
+
+
 
 ## Construisez un site e-commerce ##
 
