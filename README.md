@@ -1,5 +1,11 @@
 # Orinoco Mobile First version #
 
+# :warning: #
+si vous tentez d'ouvrir le fichier index.html depuis l'endroit où vous avez cloné le repository, un message d'erreur 'CORS' qui bloque l'accés au
+script et empêche son execution. 
+A ce jour, mon niveau en Js ne me permet pas de corriger ce problème.  
+Utilisez le lien suivant : https://flo654.github.io//DWJ-orinoco-projet5/frontend/index.html
+
 ## Construisez un site e-commerce ##
 
 ### Compétences évaluées ###
@@ -28,3 +34,5 @@ le serveur demarrera en `localhost` avec par defaut le port `3000`.
 vous verrez appaitre dans la console, un message vous signifiant le port sur lequel a demarré le serveur(`Listening on port 3001`).
 * Enfin, pour acceder à l'application cliquez sur le lien ci dessous  ou copiez le dans votre navigateur:
 https://flo654.github.io//DWJ-orinoco-projet5/frontend/index.html
+
+
