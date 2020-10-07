@@ -1,22 +1,30 @@
-# Orinoco #
-# Mobile First version #
+# Orinoco Mobile First version #
 
 ## Construisez un site e-commerce ##
 
+### Compétences évaluées ###
+
+* Valider des données issues de sources externes
+* Gérer des événements JavaScript
+* Créer un plan de test pour une application
+* Interagir avec un web service avec JavaScript  
 
 
 
 
-This is the back end server for Project 5 of the Junior Web Developer path.
 
-### Prerequisites ###
 
-You will need to have Node and `npm` installed locally on your machine.
+
+### prérequis ###
+
+'node' et 'npm' doivent être installés sur votre machine.
 
 ### Installation ###
 
-Clone this repo. From within the project folder, run `npm install`. You 
-can then run the server with `node server`. 
-The server should run on `localhost` with default port `3000`. If the
-server runs on another port for any reason, this is printed to the
-console when the server starts, e.g. `Listening on port 3001`.
+* Cloner le repository . A l'interieur du dossier cloné, ouvrez une invite de commande, et saisissez `npm install`. 
+* Ensuite, demarrez le serveur en tapant dans l'invite de commande `node server`. 
+le serveur demarrera en `localhost` avec par defaut le port `3000`. 
+* Si pour quelque raison que ce soit le serveur demarre sur un autre port, 
+vous verrez appaitre dans la console, un message vous signifiant le port sur lequel a demarré le serveur(`Listening on port 3001`).
+* Enfin, pour acceder à l'application cliquez sur le lien ci dessous  ou copiez le dans votre navigateur:
+https://flo654.github.io//DWJ-orinoco-projet5/frontend/index.html
