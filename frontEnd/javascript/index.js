@@ -5,7 +5,7 @@
 //=======================================================
 
 
-import { Products, AllProductsRendering, updateCart } from "./classes.js";
+//import { Products, AllProductsRendering, updateCart } from "./classes.js";
 
 
 const teddyUi = new AllProductsRendering

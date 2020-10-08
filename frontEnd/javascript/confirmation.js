@@ -1,4 +1,4 @@
-import{cart} from "./classes.js"
+//import{cart} from "./classes.js"
 
 let OrderID = JSON.parse(sessionStorage.orderConfirm)
 

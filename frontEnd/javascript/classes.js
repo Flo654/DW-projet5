@@ -2,7 +2,7 @@
 //===================== get products ====================
 //=======================================================
 
-export class Products{
+ class Products{
 
     // commentaire
     async getProducts(url){
@@ -25,7 +25,7 @@ export class Products{
 //================= display UI products =================
 //=======================================================
 
-export class AllProductsRendering{
+ class AllProductsRendering{
     
     //=======================================================
     //================ display all products =================
@@ -56,7 +56,7 @@ export class AllProductsRendering{
    }
 }
 
-export class ProductSelectedRendering {
+ class ProductSelectedRendering {
     //=======================================================
     //============= display product selected ================
     //=======================================================
@@ -136,7 +136,7 @@ export class ProductSelectedRendering {
 //=================== class cart ========================
 //=======================================================
 
-export  class Cart {
+class Cart {
 
     DisplayCart(){
         if (cart === null){return}
@@ -187,7 +187,7 @@ export  class Cart {
 //=================== class Contact =====================
 //=======================================================
 
-export class Contact {
+class Contact {
     constructor(firstName, lastName, address, city, email){
         this.firstName = firstName
         this.lastName = lastName,
@@ -202,7 +202,7 @@ export class Contact {
 //===================== send order ======================
 //=======================================================
 
-export class SendCart{
+class SendCart{
     async SendProducts(url,contact, products){
         const options = {
             method: 'POST',
@@ -245,8 +245,8 @@ export class SendCart{
   //============= fonction update cart ====================
   //=======================================================
   
-  export let cart = JSON.parse(localStorage.getItem('cartShopping'));
-  export function updateCart() {
+  let cart = JSON.parse(localStorage.getItem('cartShopping'));
+  function updateCart() {
       if( cart !== null){
          let cartQuantity = cart.reduce(function (total,product){return total + product.quantity},0) ; 
          let cartTotalPrice = cart.reduce(function (total,product){return total + product.total },0) ;
@@ -269,7 +269,7 @@ export class SendCart{
   //========== fonction display total price ===============
   //=======================================================
   
-  export function TotalPrice (){
+  function TotalPrice (){
       if (cart === null){return}
       let cartTotalPrice = cart.reduce(function (total,product){return total + product.total },0) ;
       let cartTotalPriceTVA = (cartTotalPrice - (cartTotalPrice/1.20)).toFixed(2)    
@@ -283,7 +283,7 @@ export class SendCart{
   //============ fonction add remove clear ================
   //=======================================================
   
-   export function ModifyQuantityProduct(product){
+   function ModifyQuantityProduct(product){
   
     ////////////////////////////////////////////////////////////////
     ///ajout de la fonction incrementer la quantité de l'article////

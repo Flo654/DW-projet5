@@ -1,4 +1,4 @@
-import{updateCart, cart, TotalPrice, Cart , Contact, SendCart } from "./classes.js"
+//import{updateCart, cart, TotalPrice, Cart , Contact, SendCart } from "./classes.js"
 
 
 
