@@ -239,28 +239,6 @@ export class SendCart{
 
 
 
-//=======================================================
-//============= fonctions Catch & Display=================
-//=======================================================
-
-export function DisplayAll(urlApi, nameProducts, uiProduct){
-    nameProducts.getProducts(urlApi) //appel de la fonction'fetch' depuis la classe Products qui renvoie la promesse
-    .then (result => {
-        uiProduct.DisplayProducts(result)
-    })// traitement de la promesse et appel de la fonction display qui affiche le result HTML 
-  };
-  
-  
-  export function DisplayOne (urlApi, nameProduct, uiProduct ){
-    nameProduct.getProducts(urlApi)
-    .then (result =>{
-        uiProduct.DisplaySeletedProduct(result);
-        uiProduct.getAddProductToCart(result)
-    })
-    
-  }
-    
-  
   
   
   //=======================================================

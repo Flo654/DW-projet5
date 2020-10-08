@@ -5,15 +5,19 @@
 //=======================================================
 
 
-import { Products, AllProductsRendering, DisplayAll, updateCart } from "./classes.js";
+import { Products, AllProductsRendering, updateCart } from "./classes.js";
 
 
 const teddyUi = new AllProductsRendering
-const teddyProducts = new Products()
+const teddyProducts = new Products
 const teddyApi = 'http://localhost:3000/api/teddies/'
 
 
-DisplayAll(teddyApi, teddyProducts, teddyUi)
+
+teddyProducts.getProducts(teddyApi) //Appel de la methode getProducts (fetch) de la classe Product qui recupere les données
+.then (result => {
+    teddyUi.DisplayProducts(result)// Appel de la methode DisplayProducts de la classe AllProductsRendering qui affiche les données
+})
+
 updateCart()
 
-console.log()
